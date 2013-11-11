@@ -1,0 +1,15 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\CardScript.js">
+    <Files>
+      <File FileName="Assets\Standard Assets\Scripts\General Scripts\ActivateTrigger.cs" Line="50" Column="41" />
+      <File FileName="Assets\GlobalVars.js" Line="30" Column="55" />
+      <File FileName="Assets\SideTrigger.js" Line="14" Column="1" />
+      <File FileName="Assets\CardScript.js" Line="109" Column="5" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
