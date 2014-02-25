@@ -1,7 +1,7 @@
 ----------------------------------------------
             NGUI: Next-Gen UI kit
  Copyright © 2011-2014 Tasharen Entertainment
-            Version 3.4.8
+            Version 3.5.1
     http://www.tasharen.com/?page_id=197
             support@tasharen.com
 ----------------------------------------------
@@ -36,6 +36,46 @@ Using NGUI with JavaScript (UnityScript)? Read this first: http://www.tasharen.c
 -----------------
  Version History
 -----------------
+
+3.5.1
+- NEW: CSV reader will now convert the "\n" character sequence into a new line char.
+- FIX: Scenes using NGUI should no longer get marked edited so much.
+- FIX: Reduced the size of meshes used by NGUI draw calls.
+- FIX: Changing the panel's alpha will now properly inform child panels.
+- FIX: Fix for how URL tags get parsed in labels.
+
+3.5.0
+- NEW: Localization system now supports CSV type input.
+- NEW: UILocalize script now has key lookup and localized preview options.
+- NEW: UICamera now has a new event type that supports 2D colliders.
+- NEW: Added justified alignment support for labels.
+- NEW: Scroll views now have a Content Origin point.
+- NEW: You can now freely adjust width and height of anchored widgets.
+- NEW: UIDragResize script now has a maximum size limiting option as well.
+- FIX: Improved scroll view resizing and logic regarding how it repositions the content.
+- FIX: Fixed an issue with how changing panel's alpha would not propagate to children in certain cases.
+- FIX: NGUI will no longer intercept RMB events that occur outside the selected widget's area.
+- FIX: UICenterOnClick should now work as expected when there is no UICenterOnChild present.
+- FIX: UICenterOnClick shouldn't cache the panel anymore, making it work properly with drag & drop.
+- FIX: Widget inspector's Dimensions field should no longer be grayed out if the widget is partially anchored.
+- FIX: UIRoot's FixedSizeOnMobiles setting should now recognize BB and WP8 as mobile devices
+- FIX: UICamera will now clear all active touch events when the application is paused.
+- FIX: Work-around for dynamic font delegate subscriptions causing epic GC.
+- FIX: Setting label text will now auto-adjust the collider size.
+- FIX: Inlined italic text should now look better.
+
+3.4.9
+- NEW: You can now embed hidden content in labels using bbcode: [url=link]Click Here[/url]. Retrieve this content via UILabel.GetUrlAtPosition(UICamera.lastHit.point), then do what you want.
+- NEW: Labels can now keep references to UIFonts that use dynamic fonts, for easy replacement/swapping.
+- FIX: Work-around for a bug in Unity related to dynamic fonts discarding previously requested characters.
+- FIX: UIButtonColor/UIButton will set the normal color in Awake instead of Start to avoid conflicts with tweens.
+- FIX: Create UI menu option will now let you create a 3D UI if you have a 2D UI present, and vice versa.
+- FIX: Input improvements: IME text selection while typing and proper dialog positioning.
+- FIX: Parent widget's visibility checks should no longer cause children to be culled.
+- FIX: Scaled bitmap fonts should now be correctly affected by the gradient setting.
+- FIX: Removed UIAnchor usage from the Scroll View example.
+- FIX: UIRoot should be executed before everything else.
+- FIX: UIToggle.startsChecked is now be public.
 
 3.4.8
 - NEW: Tweens will now display the curve in inspector as a square, making it easier to eyeball.
