@@ -10,6 +10,13 @@ var state = 0;
 
 //Need var string array
 
+var greenCardArr : Texture2D[] = new Texture2D[5];
+var blueCardArr : Texture2D[] = new Texture2D[5];
+var pinkCardArr : Texture2D[] = new Texture2D[5];
+var redCardArr : Texture2D[] = new Texture2D[5];
+
+var randomInt = 0; 
+
 function Start () {
 
 }
@@ -28,18 +35,22 @@ function Update () {
             var color = GlobalVars.currentCharPosition%4;
             if(color == 0)
             {
+                randomInt = Random.Range(0,5);
                 blue = true; 
             }
             if(color == 1)
             {
+                randomInt = Random.Range(0,5);
                 green = true;
             }
             if(color == 2)
             {
+                randomInt = Random.Range(0,5);
                 pink = true;
             }
             if(color == 3)
             {
+                randomInt = Random.Range(0,5);
                 red = true;
             }
         }
@@ -49,19 +60,24 @@ function Update () {
 /*
 function create()
 {
-	instanctiate()
+    instanctiate()
 }
 */
-
+function OnMouseUp(){
+    
+}
 function OnGUI()
 {
     if(blue)
     {
+        //blueCardTex.enabled = true;
+    
         //Debug.Log(GlobalVars.status);
         GUI.backgroundColor = Color.blue;
         //Stop displaying
         state = 0;
-        if (GUI.Button (Rect ((Screen.width/2)-175,(Screen.height/2)-100,350,200), "I am a button")) 
+        Debug.Log("blue card : " + randomInt);
+        if (GUI.Button (Rect ((Screen.width/2)-200,(Screen.height/2)-300,400,600), blueCardArr[randomInt])) 
         {
             
             blue = false;
@@ -74,7 +90,8 @@ function OnGUI()
         GUI.backgroundColor = Color.magenta;
         //Stop displaying
         state = 0;
-        if (GUI.Button (Rect ((Screen.width/2)-175,(Screen.height/2)-100,350,200), "I am a button")) 
+        Debug.Log("green card : " + randomInt);
+        if (GUI.Button (Rect ((Screen.width/2)-200,(Screen.height/2)-300,400,600), greenCardArr[randomInt])) 
         {
             //Debug.Log("Tried to make this end");
             green = false;
@@ -86,7 +103,8 @@ function OnGUI()
         GUI.backgroundColor = Color(1,.07,.57,1);
         //Stop displaying
         state = 0;
-        if (GUI.Button (Rect ((Screen.width/2)-175,(Screen.height/2)-100,350,200), "I am a button")) 
+        Debug.Log("pink card : " + randomInt);
+        if (GUI.Button (Rect ((Screen.width/2)-200,(Screen.height/2)-300,400,600), pinkCardArr[randomInt])) 
         {
             
             pink = false;
@@ -98,7 +116,8 @@ function OnGUI()
         GUI.backgroundColor = Color.red;
         //Stop displaying
         state = 0;
-        if (GUI.Button (Rect ((Screen.width/2)-175,(Screen.height/2)-100,350,200), "I am a button")) 
+        Debug.Log("red card : " + randomInt);
+        if (GUI.Button (Rect ((Screen.width/2)-200,(Screen.height/2)-300,400,600), redCardArr[randomInt])) 
         {
             
             red = false;
