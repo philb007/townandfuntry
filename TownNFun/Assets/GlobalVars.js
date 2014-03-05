@@ -25,12 +25,22 @@ static var RollPhase = 2;
 static var MovePhase = 3;
 static var GetCardPhase = 4;
 
+static var endGame = false;
+static var startingGame = true;
+
 function Update () 
 {
 	if(currentNumber == previousNumber && diceRolled != 1)
 	{
 		counter++;
-		if(counter == 100)
+		if(GlobalVars.startingGame == true)
+		{
+			if(counter == 100)
+			{
+				GlobalVars.startingGame = false;
+			}
+		}
+		else if(counter == 100)
 		{
 			rolled = currentNumber;
 			diceRolled = 1;

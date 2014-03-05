@@ -89,6 +89,11 @@ function Start ()
 //The function "Update()" is called every frame. It can get slow if overused.
 function Update ()
 {
+  if(WPindexPointer >= waypoints.Length)
+  {
+    GlobalVars.endGame = true;
+    return;
+  }
     if(GlobalVars.status == GlobalVars.MovePhase)
     {
     waypoint = waypoints[WPindexPointer]; //Keep the object pointed toward the current Waypoint object.
